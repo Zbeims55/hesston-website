@@ -406,7 +406,18 @@ body {
 .pricing-card.featured .pricing-price { color: var(--white); }
 .pricing-card.featured .pricing-price span { color: rgba(255,255,255,.55); }
 
-.pricing-equiv { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+.pricing-equiv { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+
+.pricing-new-patient {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
 .pricing-card.featured .pricing-equiv { color: rgba(255,255,255,.55); }
 
 .pricing-list { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
