@@ -373,8 +373,8 @@ body {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 600px;
+  grid-template-rows: repeat(3, 1fr);
+  height: 640px;
   gap: 4px;
 }
 
@@ -382,7 +382,7 @@ body {
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
 .gallery-item:hover img { transform: scale(1.03); }
 
-.gallery-item--featured { grid-row: 1 / 3; }
+.gallery-item--featured { grid-row: 1 / 4; }
 
 /* ── CONDITIONS ─────────────────────────────────────────────── */
 .conditions { padding: 112px 0; background: var(--navy); }
