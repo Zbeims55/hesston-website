@@ -184,7 +184,7 @@ body {
 
 .hero-card {
   flex-shrink: 0;
-  width: 280px;
+  width: 300px;
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.15);
   backdrop-filter: blur(12px);
@@ -224,6 +224,44 @@ body {
   gap: 10px;
 }
 .hero-card-list li::before { content: '✓'; color: rgba(255,255,255,.5); font-weight: 700; }
+
+.hero-card-or {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+  margin: 22px 0 18px;
+  position: relative;
+}
+.hero-card-or::before, .hero-card-or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: rgba(255,255,255,.12);
+}
+.hero-card-or::before { left: 0; }
+.hero-card-or::after { right: 0; }
+
+.hero-card-packages { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+.hero-pkg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,.85);
+}
+.hero-pkg-name { flex: 1; font-weight: 600; }
+.hero-pkg-price { font-weight: 700; }
+.hero-pkg-save { font-size: 11px; color: rgba(255,255,255,.45); white-space: nowrap; }
+
+.hero-pkg-note { font-size: 11px; color: rgba(255,255,255,.4); margin-top: 10px; }
+
+.btn-ghost-light { background: transparent; color: rgba(255,255,255,.75); border: 1px solid rgba(255,255,255,.25); }
+.btn-ghost-light:hover { background: rgba(255,255,255,.08); color: var(--white); border-color: rgba(255,255,255,.45); }
 
 /* ── Trust Bar ───────────────────────────────────────────── */
 .trust-bar { background: var(--navy-dk); border-top: 1px solid rgba(255,255,255,.08); }
