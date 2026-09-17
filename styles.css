@@ -598,8 +598,8 @@ body {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 60px;
   align-items: start;
 }
 
@@ -630,6 +630,51 @@ body {
 .hours-row span:last-child { color: var(--muted); text-align: right; }
 .hours-row.closed span { opacity: .4; }
 .hours-note { font-size: 13px; color: var(--muted); margin-top: 14px; font-style: italic; }
+
+.contact-form-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.contact-form-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+}
+
+.form-group textarea { resize: vertical; min-height: 100px; }
 
 /* ── Footer ──────────────────────────────────────────────── */
 .footer { background: var(--navy-dk); padding: 44px 0; }
@@ -677,7 +722,8 @@ body {
   .pricing-card.featured { order: -1; }
   .packages-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 52px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
   .footer-right { text-align: left; }
   .nav-links { display: none; }

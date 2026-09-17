@@ -373,6 +373,32 @@
       </div>
       <p class="hours-note">Hours are approximate — book online to confirm availability.</p>
     </div>
+    <div class="contact-form-block">
+      <h3 class="contact-form-title">Send a Message</h3>
+      <p class="contact-form-sub">Have a question? We'll get back to you shortly.</p>
+      <form name="contact" method="POST" data-netlify="true" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-phone">Phone</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="(620) 000-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 
