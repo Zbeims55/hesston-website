@@ -355,18 +355,8 @@ body {
 }
 
 .product-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 15px;
   color: var(--text);
-  gap: 8px;
-}
-
-.product-list li span:last-child {
-  font-weight: 700;
-  color: var(--navy);
-  white-space: nowrap;
 }
 
 .products-note {
