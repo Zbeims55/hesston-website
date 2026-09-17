@@ -376,7 +376,7 @@
     <div class="contact-form-block">
       <h3 class="contact-form-title">Send a Message</h3>
       <p class="contact-form-sub">Have a question? We'll get back to you shortly.</p>
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <div class="form-row">
           <div class="form-group">
@@ -398,6 +398,26 @@
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message</button>
       </form>
+      <div id="contact-success" style="display:none" class="form-success">
+        <div class="form-success-icon">✓</div>
+        <p><strong>Message sent!</strong> We'll be in touch soon.</p>
+      </div>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = this;
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          }).then(function() {
+            form.style.display = 'none';
+            document.getElementById('contact-success').style.display = 'block';
+          }).catch(function() {
+            alert('Something went wrong — please call us at (620) 322-0115.');
+          });
+        });
+      </script>
     </div>
   </div>
 </section>

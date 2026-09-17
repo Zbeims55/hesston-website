@@ -676,6 +676,21 @@ body {
 
 .form-group textarea { resize: vertical; min-height: 100px; }
 
+.form-success {
+  text-align: center;
+  padding: 40px 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  background: var(--cream);
+}
+.form-success-icon {
+  font-size: 32px;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.form-success p { color: var(--text); font-size: 15px; margin: 0; }
+
 /* ── Footer ──────────────────────────────────────────────── */
 .footer { background: var(--navy-dk); padding: 44px 0; }
 .footer-inner {
