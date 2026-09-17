@@ -320,6 +320,62 @@ body {
 .pillar h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .pillar p { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
+/* ── Products ────────────────────────────────────────────── */
+.products-section { padding: 112px 0; background: var(--cream); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.product-category {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+}
+
+.product-cat-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border);
+}
+
+.product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: var(--text);
+  gap: 8px;
+}
+
+.product-list li span:last-child {
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.products-note {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ── Conditions ──────────────────────────────────────────── */
 .conditions { padding: 112px 0; background: var(--navy); }
 
@@ -564,6 +620,7 @@ body {
 
   .about-top { grid-template-columns: 1fr; gap: 40px; }
   .pillars { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
   .pricing-card.featured { order: -1; }
   .packages-grid { grid-template-columns: 1fr; }
