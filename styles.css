@@ -553,7 +553,10 @@ body {
 .cta-section { padding: 112px 28px; background: var(--cream); }
 
 /* ── Contact ─────────────────────────────────────────────── */
-.contact-section { padding: 112px 0; background: var(--white); }
+.contact-section { padding: 0 0 112px; background: var(--white); }
+
+.contact-exterior { width: 100%; height: 340px; overflow: hidden; margin-bottom: 80px; }
+.contact-exterior img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; }
 
 .contact-grid {
   display: grid;
